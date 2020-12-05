@@ -1,0 +1,60 @@
+@mixin max($bkp) {
+  @media screen and (max-width: $bkp) {
+    @content;
+  }
+}
+
+@mixin min($bkp) {
+  @media screen and (min-width: $bkp) {
+    @content;
+  }
+}
+
+@mixin maxMin($bkpMax, $bkpMin) {
+  @media screen and (max-width: $bkpMax) and (min-width: $bkpMin) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 801px) {
+    @content;
+  }
+}
+
+@mixin result() {
+  &.positive {
+    color:$app_on;
+    &::before {
+      content:'';
+      position: relative;
+      top: -12px;
+      left: -3px;
+      width: 0; 
+      height: 0; 
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid $app_on;
+    }
+  }
+  &.negative {
+    color:$negativeColor;
+    &::before {
+      content:'';
+      position: relative;
+      top: 13px;
+      left: -3px;
+      width: 0; 
+      height: 0; 
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid $negativeColor;
+    }
+  }
+}
