@@ -1,0 +1,113 @@
+.challenge {
+    background-color: $bg-colorg;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: $gray_dark;
+    letter-spacing: 0.1em;
+    padding: 0em 1em;
+    text-align: center;
+
+    @include  desktop {
+        padding: 0em 9em;
+    }
+
+    h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5em;
+        padding: 1em 0;
+        
+        @include  desktop {
+            padding: 3.5em 0;
+            font-size: 2em;
+        }
+    }
+
+    .challenge__github {
+        background-color: $plain_white;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 2em 0;
+        border-radius: 5px;
+        box-shadow: 0px 1px 5px #c8ced6;
+        margin-bottom: 3em;
+
+        @include  desktop {
+            margin-bottom: 6em;
+        }
+
+        .challenge__github--left {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.8em;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+
+            .profile-pic {
+                width: 7em;
+                height: 7em;
+                border-radius: 100%;
+                margin-bottom: 1em;
+
+                @include  desktop {
+                    width: 10em;
+                    height: 10em;
+                }
+            }
+        }
+        .challenge__github--right {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            padding-left: 1.7em;
+
+            .main-text {
+                font-size: 0.8em;
+                font-weight: 700;
+                letter-spacing: 0.05em;
+                padding-bottom: 1em;
+            }
+
+            .btns {
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                padding: 1em 1em 1em 0;
+                
+                @include  desktop {
+                    padding: 1em 2em 1em 0;
+                }    
+                button {
+                    align-items: center;
+                    font-size: 0.6em;
+                    min-width: 13em;
+                    height: 4em;
+                    margin-right: 0.5em;
+                    margin-bottom: 1em;
+                    font-weight: 700;
+                    letter-spacing: 0.05em;
+                    color: $btn-colorg;
+                    border: solid $btn-colorg 2px;
+                    border-radius: 2px;
+
+                    @include  desktop {
+                        font-size: 0.8em;
+                        width: 14em;
+                        height: 3.5em;
+                    }
+
+                    &:hover {
+                        background-color: $btn-colorg;
+                        color:$plain_white;
+                        box-shadow: 2px 7px 5px #c8ced6;
+                    }
+                }
+            }
+        }
+    }
+}

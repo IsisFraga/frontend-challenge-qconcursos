@@ -1,0 +1,17 @@
+footer {
+    background-color: $gray_dark;
+    color: $plain_white;
+    text-align: center;
+
+    .text {
+        padding: 1.5em 0;
+        letter-spacing: 0.1em;
+        font-size: 0.8em;
+        font-weight: 300;
+
+        @include  desktop {
+            padding: 2.5em 0;
+            font-size: 1.2em;
+        }
+    }
+}
