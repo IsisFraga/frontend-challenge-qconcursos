@@ -1,0 +1,36 @@
+@import "./variables";
+@import "./mixins";
+@import "./home";
+@import "./resets";
+@import "./about";
+@import "./challenge";
+@import "./footer";
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.mainContainer {
+  flex: 1;
+  overflow: auto;
+}
+
+.pageTitle {
+  line-height: 24px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.textOverflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: inline-block;
+}

@@ -1,0 +1,36 @@
+@mixin max($bkp) {
+  @media screen and (max-width: $bkp) {
+    @content;
+  }
+}
+
+@mixin min($bkp) {
+  @media screen and (min-width: $bkp) {
+    @content;
+  }
+}
+
+@mixin maxMin($bkpMax, $bkpMin) {
+  @media screen and (max-width: $bkpMax) and (min-width: $bkpMin) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 880px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 460px) and (max-width: 880px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 881px) {
+    @content;
+  }
+}
+

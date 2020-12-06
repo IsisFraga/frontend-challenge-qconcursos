@@ -1,0 +1,38 @@
+.about {
+    width: 100%;
+    display: flex;
+    background-color: $plain_white;
+    flex-direction: column;
+    color: $gray_dark;
+    letter-spacing: 0.1em;
+    padding: 0 1em;
+
+    @include  desktop {
+        padding: 0 9em;
+    }
+
+    h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5em;
+        padding: 1em 0;
+        
+        @include  desktop {
+            padding: 3.5em 0;
+            font-size: 2em;
+        }
+    }
+
+    .about__text {
+        width: 100%;
+        font-size: 0.8em;
+        padding-bottom: 1.5em;
+        line-height: 1.5em;
+
+        @include  desktop {
+            font-size: 1em;
+            padding-bottom: 2em;
+        }
+    }
+}
+
