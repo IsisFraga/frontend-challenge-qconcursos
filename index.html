@@ -80,63 +80,44 @@
     <div class="challenge__github">
       <div class="challenge__github--profile">
         <div class="left">
-          <img class="profile-pic" src="/img/isis-fraga.jpg" alt="Foto da pessoa">
+          <img id="myImg" class="profile-pic" src="" alt="Foto da pessoa">
           <p class="main-text card-align">
-            visitar perfil
+            <a id="profileLink" href="" target="_blank">visitar perfil</a>
           </p>
         </div>
         <div class="right">
           <div class="info">
             <p class="main-text">
-              Repositórios: 15
+              Repositórios: <span id="reps"> </span>
             </p>
             <p class="main-text">
-              Seguidores: 15
+              Seguidores: <span id="folls"> </span>
             </p>
             <p class="main-text">
-              Seguindo: 30
+              Seguindo: <span id="folli"> </span>
             </p>
           </div>
           <div class="btns">
-            <button>
+            <button id="repos">
               ver repositórios
             </button>
-            <button>
+            <button id="favs">
               ver favoritos
             </button>
           </div>
         </div>
       </div>
       <div class="challenge__github--repositories">
-        <h3 class="card-align">
-          Lista dos repositórios
-        </h3>
-        <div class="names">
-          <p class="names__txt">
-            Nome do repo
-          </p>
-          <p class="names__txt">
-            Nome do repo
-          </p>
-          <p class="names__txt">
-            Nome do repo
-          </p>
-          <p class="names__txt">
-            Nome do repo
-          </p>
-          <p class="names__txt">
-            Nome do repo
-          </p>
-        </div>
+
       </div>
   </section>
+  <footer>
+    <p class="text">
+      Desafio Desenvolvedor Front End Qconcursos.com
+    </p>
+  </footer>
+  <script src="js/apiCall.js"></script>
+  <script src="js/buildChallengeFront.js"></script>
+  <script src="js/index.js"></script>
 </body>
-<footer>
-  <p class="text">
-    Desafio Desenvolvedor Front End Qconcursos.com
-  </p>
-</footer>
-<script>
-
-</script>
 </html>
