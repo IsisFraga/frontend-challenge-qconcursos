@@ -8,7 +8,7 @@
     background-position: center;
     color: $plain_white;
 
-    .home__header {
+    &__header {
 
         display: flex;
         width: 100%;
@@ -16,13 +16,13 @@
         padding: 3em 1.5em;
         font-size: 0.9em;
 
-        .home__header--left {
+        &--left {
             h3 {
                 font-weight: 200;
                 letter-spacing: 0.1em;
             }
         }
-        .home__header--right {
+        &--right {
             text-align: right;
             .menu{
                 ul{
@@ -42,10 +42,10 @@
         @include desktop {
             flex-direction: row;
 
-            .home__header--left {
+            &--left {
                 width: 70%;
             }
-            .home__header--right {
+            &--right {
                 width: 30%;
                 text-align: right;
             }
@@ -55,19 +55,19 @@
             flex-direction: column;
             padding: 1em 1.5em;
 
-                .home__header--left {
+                &--left {
                     width: 100%;
                     text-align: center;
                     margin-bottom: 1em;
     
                 }
-                .home__header--right {
+                &--right {
                     width: 100%;
                 }
         }
     }
 
-    .home__title {
+    &__title {
         display: flex;
         flex-direction: column;
         text-align: center;
