@@ -46,7 +46,7 @@
   color: #ffff60;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 881px) {
   .home .home__header {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -62,7 +62,7 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 880px) {
   .home .home__header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -99,7 +99,7 @@
   margin-bottom: 0.5em;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 881px) {
   .home .home__title h1 {
     font-size: 3.2em;
   }
@@ -110,7 +110,7 @@
   letter-spacing: 0.08em;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 881px) {
   .home .home__title h3 {
     font-size: 2em;
   }
@@ -176,7 +176,7 @@ a {
   padding: 0 1em;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 881px) {
   .about {
     padding: 0 9em;
   }
@@ -189,7 +189,7 @@ a {
   padding: 1em 0;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 881px) {
   .about h2 {
     padding: 3.5em 0;
     font-size: 2em;
@@ -203,15 +203,18 @@ a {
   line-height: 1.5em;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 881px) {
   .about .about__text {
     font-size: 1em;
     padding-bottom: 2em;
   }
 }
 
-.challenge {
+body {
   background-color: #ebf6ee;
+}
+
+body .challenge {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -229,25 +232,54 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 3em;
 }
 
-.challenge h2 {
+body .challenge h2 {
   width: 100%;
   text-align: center;
   font-size: 1.5em;
   padding: 1em 0;
 }
 
-@media screen and (min-width: 801px) {
-  .challenge h2 {
+@media screen and (min-width: 881px) {
+  body .challenge h2 {
     padding: 3.5em 0;
     font-size: 2em;
   }
 }
 
-.challenge .challenge__github {
-  background-color: #ffffff;
+body .challenge__github {
   width: 90%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 1px 5px #c8ced6;
+          box-shadow: 0px 1px 5px #c8ced6;
+  padding: 1em;
+}
+
+@media screen and (min-width: 881px) {
+  body .challenge__github {
+    margin-bottom: 6em;
+    width: 70%;
+    max-width: 46em;
+    padding: 2em;
+  }
+}
+
+@media screen and (min-width: 460px) and (max-width: 880px) {
+  body .challenge__github {
+    width: 70%;
+    max-width: 35em;
+  }
+}
+
+body .challenge__github .card-align {
+  padding-left: 1em;
+  color: #28472f;
+}
+
+body .challenge__github--profile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -255,32 +287,12 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 2em 0;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 1px 5px #c8ced6;
-          box-shadow: 0px 1px 5px #c8ced6;
-  margin-bottom: 3em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-@media screen and (min-width: 801px) {
-  .challenge .challenge__github {
-    margin-bottom: 6em;
-    width: 70%;
-    max-width: 42em;
-  }
-}
-
-@media screen and (min-width: 460px) and (max-width: 800px) {
-  .challenge .challenge__github {
-    width: 70%;
-    max-width: 35em;
-  }
-}
-
-.challenge .challenge__github .challenge__github--left {
+body .challenge__github--profile .left {
   width: 15em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -289,30 +301,53 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-size: 0.8em;
   font-weight: 700;
   letter-spacing: 0.05em;
   height: 100%;
+  text-align: left;
 }
 
-.challenge .challenge__github .challenge__github--left .profile-pic {
+body .challenge__github--profile .left .main-text {
+  text-transform: uppercase;
+  font-size: 1.15em;
+  padding-top: 0.2em;
+  text-align: center;
+}
+
+@media screen and (min-width: 881px) {
+  body .challenge__github--profile .left .main-text {
+    text-align: left;
+  }
+}
+
+body .challenge__github--profile .left .profile-pic {
   width: 7em;
   height: 7em;
   border-radius: 100%;
   margin-bottom: 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-@media screen and (min-width: 801px) {
-  .challenge .challenge__github .challenge__github--left .profile-pic {
-    width: 10em;
-    height: 10em;
+@media screen and (min-width: 881px) {
+  body .challenge__github--profile .left .profile-pic {
+    width: 12em;
+    height: 12em;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
 }
 
-.challenge .challenge__github .challenge__github--right {
+@media screen and (min-width: 460px) and (max-width: 880px) {
+  body .challenge__github--profile .left .profile-pic {
+    width: 9em;
+    height: 9em;
+  }
+}
+
+body .challenge__github--profile .right {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -332,14 +367,28 @@ a {
   height: 100%;
 }
 
-.challenge .challenge__github .challenge__github--right .main-text {
-  font-size: 0.8em;
+body .challenge__github--profile .right .main-text {
+  font-size: 0.6em;
   font-weight: 700;
   letter-spacing: 0.05em;
   padding-bottom: 1em;
+  color: #28472f;
+  text-transform: uppercase;
 }
 
-.challenge .challenge__github .challenge__github--right .btns {
+@media screen and (min-width: 881px) {
+  body .challenge__github--profile .right .main-text {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (min-width: 460px) and (max-width: 880px) {
+  body .challenge__github--profile .right .main-text {
+    font-size: 0.7em;
+  }
+}
+
+body .challenge__github--profile .right .btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -348,51 +397,105 @@ a {
           justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 1em 1em 0 0;
 }
 
-@media screen and (min-width: 801px) {
-  .challenge .challenge__github .challenge__github--right .btns {
-    padding: 1em 2em 0 0;
+@media screen and (min-width: 881px) {
+  body .challenge__github--profile .right .btns {
+    padding: 2em 0 0 0;
   }
 }
 
-.challenge .challenge__github .challenge__github--right .btns button {
+@media screen and (min-width: 460px) and (max-width: 880px) {
+  body .challenge__github--profile .right .btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+body .challenge__github--profile .right .btns button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   font-size: 0.6em;
   min-width: 11em;
   height: 3.5em;
-  margin-right: 0.5em;
+  margin-top: 0.2em;
   font-weight: 700;
   letter-spacing: 0.05em;
-  color: #a5d1b1;
-  border: solid #a5d1b1 2px;
-  border-radius: 2px;
+  color: #86c498;
+  border: solid #86c498 2px;
+  border-radius: 3px;
+  text-transform: uppercase;
 }
 
-@media screen and (min-width: 801px) {
-  .challenge .challenge__github .challenge__github--right .btns button {
-    font-size: 0.8em;
-    width: 15em;
-    height: 3em;
-    margin-right: 1em;
+@media screen and (min-width: 881px) {
+  body .challenge__github--profile .right .btns button {
+    font-size: 0.9em;
+    min-width: 11em;
+    height: 3.2em;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  body .challenge__github--profile .right .btns button:nth-child(1) {
+    margin-right: 1.5em;
   }
 }
 
-@media screen and (min-width: 460px) and (max-width: 800px) {
-  .challenge .challenge__github .challenge__github--right .btns button {
+@media screen and (min-width: 460px) and (max-width: 880px) {
+  body .challenge__github--profile .right .btns button {
     width: 15em;
     height: 3em;
   }
 }
 
-.challenge .challenge__github .challenge__github--right .btns button:hover {
-  background-color: #a5d1b1;
+body .challenge__github--profile .right .btns button:hover {
+  background-color: #86c498;
   color: #ffffff;
   -webkit-box-shadow: 2px 7px 5px #c8ced6;
           box-shadow: 2px 7px 5px #c8ced6;
+}
+
+body .challenge__github--repositories {
+  text-align: left;
+  margin-top: 4em;
+}
+
+body .challenge__github--repositories h3 {
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+body .challenge__github--repositories .names {
+  margin-top: 1.5em;
+  padding-left: 1em;
+}
+
+body .challenge__github--repositories .names__txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 1em;
+  height: 2em;
+  letter-spacing: 0;
+  font-weight: 500;
+  font-size: 0.95em;
+  color: #28472f;
+}
+
+body .challenge__github--repositories .names__txt:nth-child(odd) {
+  background: #c3e4cc;
+}
+
+body .challenge__github--repositories .names__txt:nth-child(even) {
+  background: #ffffff;
 }
 
 footer {
@@ -408,7 +511,7 @@ footer .text {
   font-weight: 300;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 881px) {
   footer .text {
     padding: 2.5em 0;
     font-size: 1.2em;
